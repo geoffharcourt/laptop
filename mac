@@ -59,11 +59,14 @@ echo "Installing QT, used by Capybara Webkit for headless Javascript integration
 echo "Installing watch, used to execute a program periodically and show the output ..."
   successfully brew install watch
 
-echo "Installing rbenv and Ruby 1.9.3-p362, which becomes the default ..."
+echo "Installing rbenv, ruby-build, and Ruby 1.9.3-p362, which becomes the default ..."
   successfully brew install rbenv
   successfully echo "
 # rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'" >> ~/.zshenv
+if which rbenv > /dev/null; then eval \"\$(rbenv init -)\"; fi" >> ~/.zshenv
+  
+  successfully brew install ruby-build
+  successfully rbenv rehash
   successfully rbenv install 1.9.3-p362
 
 echo "Installing critical Ruby gems for Rails development ..."

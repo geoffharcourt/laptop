@@ -68,6 +68,7 @@ if which rbenv > /dev/null; then eval \"\$(rbenv init -)\"; fi" >> ~/.zshenv
   successfully brew install ruby-build
   successfully rbenv rehash
   successfully rbenv install 1.9.3-p362
+  successfully rbenv global 1.9.3-p362
 
 echo "Installing critical Ruby gems for Rails development ..."
   successfully gem install bundler rails pg foreman thin --no-rdoc --no-ri
